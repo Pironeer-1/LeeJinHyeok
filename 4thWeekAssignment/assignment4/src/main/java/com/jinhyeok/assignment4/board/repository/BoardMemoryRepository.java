@@ -28,7 +28,7 @@ public class BoardMemoryRepository implements BoardRepository {
 
     @Override
     public Optional<Board> findById(Long id) {
-        return Optional.of(boardMap.get(id));
+        return Optional.ofNullable(boardMap.get(id));
     }
 
     @Override

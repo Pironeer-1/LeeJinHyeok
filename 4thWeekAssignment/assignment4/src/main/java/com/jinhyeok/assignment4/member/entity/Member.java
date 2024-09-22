@@ -8,13 +8,16 @@ public class Member {
     private Long id;
     private String memberId;
     private String password;
+    private String userName;
 
     @Builder
     public Member(Long id,
                   String memberId,
-                  String password) {
+                  String password,
+                  String userName) {
         this.id = id;
         this.memberId = memberId;
         this.password = password;
+        this.userName = userName;
     }
 }

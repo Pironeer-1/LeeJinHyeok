@@ -10,6 +10,7 @@ import com.jinhyeok.assignment4.global.dto.response.result.ListResult;
 import com.jinhyeok.assignment4.global.dto.response.result.SingleResult;
 import com.sun.net.httpserver.Authenticator;
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
@@ -19,6 +20,7 @@ import java.util.List;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/api/board")
+@Tag(name = "Board")
 public class BoardController {
     private final BoardService boardService;
 
