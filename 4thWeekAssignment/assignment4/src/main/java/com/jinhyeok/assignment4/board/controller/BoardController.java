@@ -43,4 +43,10 @@ public class BoardController {
         BoardResponse boardResponse = boardService.update(request);
         return SuccessResponse.ok(boardResponse);
     }
+
+    @DeleteMapping("/{boardId}")
+    public SuccessResponse<Long> delete(@PathVariable("boardId") Long id) {
+        Long deletedId = boardService.deleteById(id);
+        return SuccessResponse.ok(deletedId);
+    }
 }

@@ -32,4 +32,9 @@ public class BoardRepository {
     public List<Board> findAll() {
         return boardMap.values().stream().toList();
     }
+
+    public Long deleteById(Long id) {
+        boardMap.remove(id);
+        return id;
+    }
 }

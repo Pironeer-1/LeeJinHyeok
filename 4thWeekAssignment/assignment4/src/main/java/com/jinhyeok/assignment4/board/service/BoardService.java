@@ -42,4 +42,10 @@ public class BoardService {
         Board updatedBoard = boardRepository.save(board.update(boardUpdateRequest));
         return BoardResponse.of(updatedBoard);
     }
+
+    public Long deleteById(Long id) {
+        Board board = boardRepository.findById(id) // ID가 존재하는지 확인 후 삭제
+                .orElseThrow(() -> new CustomException(ErrorCode.BOARD_NOT_FOUND));
+        return boardRepository.deleteById(id);
+    }
 }
