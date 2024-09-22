@@ -24,7 +24,7 @@
 
 ## 컨벤션
 - **참고 자료**: https://www.inflearn.com/blogs/7143?srsltid=AfmBOoo-BEn566Ud_LrnGeUrrp50zn9hx46f1sN4miXbPp52MfAfGeWC
-- **응답 형태**: 모든 응답은 `SuccessResponse`, `ErrorResponse`로 한번 감싸서 전달하기로 결정
+- **응답 형태**: 모든 응답은 `SuccessResponse`, `ErrorResponse`로 한번, SingleResult, ListResult로 한번, 총 두번 감싸서 전달하기로 결정.
     - 응답 구조의 통일성 유지
     - 에러 핸들링 및 확장성에 용이
-    - 한번 감싼 이유는 해당 과제에서 두번 감싸는 것으로부터의 이점을 생각했을 때 뚜렷하게 보이지 않았음.
+    - 두번 감싸는 것의 이점을 잘 모르겠다고 느껴서 한번 감싸려 하였는데, 이전 프로젝트에서 마찬가지로 한번 감싸 응답을 만든 경험이 있어, 이번 과제에서는 두번 감싸기로 결정. 
